@@ -10,8 +10,7 @@ grammar MiniPyCode;
             self.indents = []            # Stack to track indentation levels
             self.current_indent = 0       # Current indentation level
 
-        def nextToken(self):
-            # Call the super class's nextToken method
+        def nextToken(self)
             token = super().nextToken()
             # Check for NEWLINE token to handle indentation
             if token.type == self.NEWLINE:

@@ -5,7 +5,7 @@ from MiniPyCodeLexer import MiniPyCodeLexer
 from MiniPyCodeParser import MiniPyCodeParser
 from antlr4.tree.Trees import Trees
 
-filepath = "./project_deliverable_1.py"
+filepath = "./project_deliverable_2.py"
 
 """
 Recursively prints the parse tree in a detailed hierarchical format.

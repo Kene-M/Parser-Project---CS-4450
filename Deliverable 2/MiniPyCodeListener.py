@@ -44,12 +44,12 @@ class MiniPyCodeListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MiniPyCodeParser#endExpr.
-    def enterEndExpr(self, ctx:MiniPyCodeParser.EndExprContext):
+    # Enter a parse tree produced by MiniPyCodeParser#endStmt.
+    def enterEndStmt(self, ctx:MiniPyCodeParser.EndStmtContext):
         pass
 
-    # Exit a parse tree produced by MiniPyCodeParser#endExpr.
-    def exitEndExpr(self, ctx:MiniPyCodeParser.EndExprContext):
+    # Exit a parse tree produced by MiniPyCodeParser#endStmt.
+    def exitEndStmt(self, ctx:MiniPyCodeParser.EndStmtContext):
         pass
 
 
@@ -62,12 +62,39 @@ class MiniPyCodeListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MiniPyCodeParser#if_context.
+    def enterIf_context(self, ctx:MiniPyCodeParser.If_contextContext):
+        pass
+
+    # Exit a parse tree produced by MiniPyCodeParser#if_context.
+    def exitIf_context(self, ctx:MiniPyCodeParser.If_contextContext):
+        pass
+
+
     # Enter a parse tree produced by MiniPyCodeParser#if_stmt.
     def enterIf_stmt(self, ctx:MiniPyCodeParser.If_stmtContext):
         pass
 
     # Exit a parse tree produced by MiniPyCodeParser#if_stmt.
     def exitIf_stmt(self, ctx:MiniPyCodeParser.If_stmtContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniPyCodeParser#elif_stmt.
+    def enterElif_stmt(self, ctx:MiniPyCodeParser.Elif_stmtContext):
+        pass
+
+    # Exit a parse tree produced by MiniPyCodeParser#elif_stmt.
+    def exitElif_stmt(self, ctx:MiniPyCodeParser.Elif_stmtContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniPyCodeParser#else_stmt.
+    def enterElse_stmt(self, ctx:MiniPyCodeParser.Else_stmtContext):
+        pass
+
+    # Exit a parse tree produced by MiniPyCodeParser#else_stmt.
+    def exitElse_stmt(self, ctx:MiniPyCodeParser.Else_stmtContext):
         pass
 
 

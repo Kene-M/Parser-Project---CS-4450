@@ -17,6 +17,15 @@ class MiniPyCodeListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MiniPyCodeParser#stmt.
+    def enterStmt(self, ctx:MiniPyCodeParser.StmtContext):
+        pass
+
+    # Exit a parse tree produced by MiniPyCodeParser#stmt.
+    def exitStmt(self, ctx:MiniPyCodeParser.StmtContext):
+        pass
+
+
     # Enter a parse tree produced by MiniPyCodeParser#expr.
     def enterExpr(self, ctx:MiniPyCodeParser.ExprContext):
         pass
@@ -35,57 +44,84 @@ class MiniPyCodeListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MiniPyCodeParser#endExpr.
-    def enterEndExpr(self, ctx:MiniPyCodeParser.EndExprContext):
+    # Enter a parse tree produced by MiniPyCodeParser#endStmt.
+    def enterEndStmt(self, ctx:MiniPyCodeParser.EndStmtContext):
         pass
 
-    # Exit a parse tree produced by MiniPyCodeParser#endExpr.
-    def exitEndExpr(self, ctx:MiniPyCodeParser.EndExprContext):
-        pass
-
-
-    # Enter a parse tree produced by MiniPyCodeParser#cond.
-    def enterCond(self, ctx:MiniPyCodeParser.CondContext):
-        pass
-
-    # Exit a parse tree produced by MiniPyCodeParser#cond.
-    def exitCond(self, ctx:MiniPyCodeParser.CondContext):
+    # Exit a parse tree produced by MiniPyCodeParser#endStmt.
+    def exitEndStmt(self, ctx:MiniPyCodeParser.EndStmtContext):
         pass
 
 
-    # Enter a parse tree produced by MiniPyCodeParser#ifExpr.
-    def enterIfExpr(self, ctx:MiniPyCodeParser.IfExprContext):
+    # Enter a parse tree produced by MiniPyCodeParser#comp_stmt.
+    def enterComp_stmt(self, ctx:MiniPyCodeParser.Comp_stmtContext):
         pass
 
-    # Exit a parse tree produced by MiniPyCodeParser#ifExpr.
-    def exitIfExpr(self, ctx:MiniPyCodeParser.IfExprContext):
-        pass
-
-
-    # Enter a parse tree produced by MiniPyCodeParser#elifExpr.
-    def enterElifExpr(self, ctx:MiniPyCodeParser.ElifExprContext):
-        pass
-
-    # Exit a parse tree produced by MiniPyCodeParser#elifExpr.
-    def exitElifExpr(self, ctx:MiniPyCodeParser.ElifExprContext):
+    # Exit a parse tree produced by MiniPyCodeParser#comp_stmt.
+    def exitComp_stmt(self, ctx:MiniPyCodeParser.Comp_stmtContext):
         pass
 
 
-    # Enter a parse tree produced by MiniPyCodeParser#elseExpr.
-    def enterElseExpr(self, ctx:MiniPyCodeParser.ElseExprContext):
+    # Enter a parse tree produced by MiniPyCodeParser#if_context.
+    def enterIf_context(self, ctx:MiniPyCodeParser.If_contextContext):
         pass
 
-    # Exit a parse tree produced by MiniPyCodeParser#elseExpr.
-    def exitElseExpr(self, ctx:MiniPyCodeParser.ElseExprContext):
+    # Exit a parse tree produced by MiniPyCodeParser#if_context.
+    def exitIf_context(self, ctx:MiniPyCodeParser.If_contextContext):
         pass
 
 
-    # Enter a parse tree produced by MiniPyCodeParser#exprBlock.
-    def enterExprBlock(self, ctx:MiniPyCodeParser.ExprBlockContext):
+    # Enter a parse tree produced by MiniPyCodeParser#if_stmt.
+    def enterIf_stmt(self, ctx:MiniPyCodeParser.If_stmtContext):
         pass
 
-    # Exit a parse tree produced by MiniPyCodeParser#exprBlock.
-    def exitExprBlock(self, ctx:MiniPyCodeParser.ExprBlockContext):
+    # Exit a parse tree produced by MiniPyCodeParser#if_stmt.
+    def exitIf_stmt(self, ctx:MiniPyCodeParser.If_stmtContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniPyCodeParser#elif_stmt.
+    def enterElif_stmt(self, ctx:MiniPyCodeParser.Elif_stmtContext):
+        pass
+
+    # Exit a parse tree produced by MiniPyCodeParser#elif_stmt.
+    def exitElif_stmt(self, ctx:MiniPyCodeParser.Elif_stmtContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniPyCodeParser#else_stmt.
+    def enterElse_stmt(self, ctx:MiniPyCodeParser.Else_stmtContext):
+        pass
+
+    # Exit a parse tree produced by MiniPyCodeParser#else_stmt.
+    def exitElse_stmt(self, ctx:MiniPyCodeParser.Else_stmtContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniPyCodeParser#condition.
+    def enterCondition(self, ctx:MiniPyCodeParser.ConditionContext):
+        pass
+
+    # Exit a parse tree produced by MiniPyCodeParser#condition.
+    def exitCondition(self, ctx:MiniPyCodeParser.ConditionContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniPyCodeParser#comparision.
+    def enterComparision(self, ctx:MiniPyCodeParser.ComparisionContext):
+        pass
+
+    # Exit a parse tree produced by MiniPyCodeParser#comparision.
+    def exitComparision(self, ctx:MiniPyCodeParser.ComparisionContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniPyCodeParser#comp_op.
+    def enterComp_op(self, ctx:MiniPyCodeParser.Comp_opContext):
+        pass
+
+    # Exit a parse tree produced by MiniPyCodeParser#comp_op.
+    def exitComp_op(self, ctx:MiniPyCodeParser.Comp_opContext):
         pass
 
 

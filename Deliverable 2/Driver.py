@@ -69,6 +69,7 @@ arith_op3 *= arith_op4
 arith_op4 /= arith_op5
 
 array1 = [1, 2, 3, 4, 5]
+array2 = ['a', 'b', 'c']
 array3 = [1.6, 2.7, 3.8, 4.9, 5.0]
 
 var1 = 10
@@ -98,7 +99,5 @@ if var1 != var2 or var3 >= var4:
 elif (not flag) and var3 > 10:
 	flag = False
 else:
-	data = -1
-
-"""
+	data = -1"""
 

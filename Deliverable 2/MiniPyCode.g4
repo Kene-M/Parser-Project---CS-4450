@@ -3,110 +3,36 @@
 ***********************************
 grammar MiniPyCode;
 
-@members {
-    import sys
-    from antlr4 import *
-
-    class PythonLexer(Lexer):
-        def __init__(self, input=None, output=sys.stdout):
-            super().__init__(input, output)
-            self.indents = []            # Stack to track indentation levels
-            self.current_indent = 0       # Current indentation level
-
-        def reset(self):
-            self.indents = []
-            self.opened = 0
-            super().reset()
-
-        def nextToken(self):
-            token = super().nextToken()
-            # Check for NEWLINE token to handle indentation
-            if token.type == self.NEWLINE:
-                self.handle_indentation()
-            return token
-
-        def handle_indentation(self):
-            # Measure leading whitespace on the current line
-            whitespace_count = 0
-            while self._input.LA(1) == ' ' or self._input.LA(1) == '\t':
-                whitespace_count += 1 if self._input.LA(1) == ' ' else 4  # e.g., tab = 4 spaces
-                self._input.consume()
-
-            # Determine if we need to emit INDENT or DEDENT tokens
-            if whitespace_count > self.current_indent:
-                self.emitToken(self.createToken(self.INDENT))
-                self.indents.append(whitespace_count)
-                self.current_indent = whitespace_count
-            elif whitespace_count < self.current_indent:
-                while self.indents and self.indents[-1] > whitespace_count:
-                    self.indents.pop()
-                    self.emitToken(self.createToken(self.DEDENT))
-                self.current_indent = whitespace_count
-
-        def createToken(self, tokenType):
-            # Create a new token of a specific type
-            token = CommonToken(self._tokenFactorySourcePair, tokenType, self.DEFAULT_TOKEN_CHANNEL, -1, -1)
-            return token
-}
-//Code based on https://github.com/antlr/grammars-v4/blob/master/python/python3/Python3/Python3LexerBase.py
-
-
 prog:	assignment* EOF;
 
 expr:	expr ('+'|'-'|'*'|'/'|'%') expr
 	| BOOL | INT | VARNAME | DOUBLE | STRING | list;
-assignment:	VARNAME ('=' | '+=' | '-=' | '*='| '/=' | '%=') expr endExpr;
-endExpr: ';' | ;
+assignment: VARNAME ('=' | '+=' | '-=' | '*='| '/=' | '%=') expr;
+endStmt: (NEWLINE INDENT? | EOF);
 
-cond:  cond AND cond
-	| cond OR cond
-	| NOT cond
-	| expr COMP_OP expr
-	;
+comp_stmt: if_context;
+if_context: if_stmt (elif_stmt)* (else_stmt)?;
+if_stmt: 'if' condition ':' (NEWLINE INDENT)? stmt+;
+elif_stmt: 'elif' condition ':' (NEWLINE INDENT)? stmt+;
+else_stmt: 'else' ':' (NEWLINE INDENT)? stmt+;
 
-ifExpr: IF cond COLON NEWLINE INDENT exprBlock DEDENT (elifExpr)* (elseExpr)?;
+condition: condition 'and' condition
+	| condition 'or' condition
+	| 'not' condition
+	| '(' condition ')'
+	| comparision;
 
-elifExpr: ELIF cond COLON NEWLINE INDENT exprBlock DEDENT;
-
-elseExpr: ELSE COLON NEWLINE INDENT exprBlock DEDENT;
-
-exprBlock: expr+;
+comparision: expr (comp_op expr)*;
+comp_op: '<'|'>'|'=='|'>='|'<='|'<>'|'!='|'in'|'not' 'in'|'is'|'is' 'not';
 
 list: '[' (expr (',' expr)*)? ']';
        
 BOOL: 'True' | 'False';
-INT:	[0-9]+;
-DOUBLE: [0-9]+ '.' [0-9]+;
+INT:	'-'? [0-9]+;
+DOUBLE: '-'? [0-9]+ '.' [0-9]+;
 VARNAME: [a-zA-Z_][a-zA-Z_0-9]*;
-// Allows STRING to contain any character except quotes or backslashes.
-STRING: ('"' (~["\\])* '"') | ('\'' (~['\\])* '\'');
-// STRING: ('"' [a-zA-Z_0-9]* '"') | ('\'' [a-zA-Z_0-9]* '\''); 
+STRING: ('"' (~["\r\n\\])* '"') | ('\'' (~['\r\n\\])* '\'');
 
-NEWLINE : [\r\n]+; // Match newlines
-WS      : [ ]+ -> skip;
-
-INDENT: '<INDENT>';
-DEDENT: '<DEDENT>';
-
-AND: 'and';
-OR: 'or';
-NOT: 'not';
-
-IF: 'if';
-ELIF: 'elif';
-ELSE: 'else';
-COLON: ':';
-//Composition operators
-COMP_OP
-    : '<'
-    | '>'
-    | '=='
-    | '>='
-    | '<='
-    | '<>'
-    | '!='
-    | 'in'
-    | 'not' 'in'
-    | 'is'
-    | 'is' 'not'
-    ;
+WS:	[ ]+ -> skip;
+NEWLINE: ('\r'? '\n')+;
+INDENT: '\t';

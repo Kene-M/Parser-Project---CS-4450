@@ -1,9 +1,7 @@
-***********************************
-*********PREVIOUS******************
-***********************************
 grammar MiniPyCode;
 
-prog:	assignment* EOF;
+prog:	stmt* EOF;
+stmt: (assignment | comp_stmt) endStmt;
 
 expr:	expr ('+'|'-'|'*'|'/'|'%') expr
 	| BOOL | INT | VARNAME | DOUBLE | STRING | list;

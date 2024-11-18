@@ -2,6 +2,7 @@ import sys
 from io import StringIO
 from antlr4 import *
 from MiniPyCodeLexer import MiniPyCodeLexer
+from CustomMiniPyCodeLexer import CustomMiniPyCodeLexer
 from MiniPyCodeParser import MiniPyCodeParser
 from antlr4.tree.Trees import Trees
 
@@ -36,17 +37,20 @@ def main():
     # OR you can use a FileStream
     s = FileStream(filepath)
     
-    lexer = MiniPyCodeLexer(s)
+    lexer = CustomMiniPyCodeLexer(s)
     stream = CommonTokenStream(lexer)
     parser = MiniPyCodeParser(stream)
 	
-    tree = parser.prog()
+    try:
+        tree = parser.prog()
+        if parser.getNumberOfSyntaxErrors() == 0:
+            print("Parse tree:")
+            print_tree(tree)
+            #print_tree(tree)
+    except Exception as e:
+        print(f"Parsing failed: {e}")
+
 	
-    if parser.getNumberOfSyntaxErrors() > 0:
-        print("failed")
-    else:
-		#print(Trees.toStringTree(tree, ruleNames=parser.ruleNames))
-        print_tree(tree)
 
 main()
 
@@ -82,7 +86,7 @@ flag = True
 assign1 = ""
 
 if var1 > var2:
-	arith_op1 = 1 + 2
+    arith_op1 = 1 + 2
 	assign1 = "text data"
 
 if var1 <= var2 and var3 == var4:

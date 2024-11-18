@@ -44,15 +44,6 @@ class MiniPyCodeListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MiniPyCodeParser#endStmt.
-    def enterEndStmt(self, ctx:MiniPyCodeParser.EndStmtContext):
-        pass
-
-    # Exit a parse tree produced by MiniPyCodeParser#endStmt.
-    def exitEndStmt(self, ctx:MiniPyCodeParser.EndStmtContext):
-        pass
-
-
     # Enter a parse tree produced by MiniPyCodeParser#comp_stmt.
     def enterComp_stmt(self, ctx:MiniPyCodeParser.Comp_stmtContext):
         pass
@@ -95,6 +86,15 @@ class MiniPyCodeListener(ParseTreeListener):
 
     # Exit a parse tree produced by MiniPyCodeParser#else_stmt.
     def exitElse_stmt(self, ctx:MiniPyCodeParser.Else_stmtContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniPyCodeParser#block.
+    def enterBlock(self, ctx:MiniPyCodeParser.BlockContext):
+        pass
+
+    # Exit a parse tree produced by MiniPyCodeParser#block.
+    def exitBlock(self, ctx:MiniPyCodeParser.BlockContext):
         pass
 
 

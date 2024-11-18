@@ -6,7 +6,7 @@ tokens {
 }
 
 prog: (NEWLINE | stmt)* EOF;
-stmt: (comp_stmt | assignment) NEWLINE+;
+stmt: (comp_stmt | assignment) NEWLINE*;
 
 expr:
 	expr ('+' | '-' | '*' | '/' | '%') expr
@@ -25,7 +25,7 @@ if_stmt: 'if' condition ':' block;
 elif_stmt: 'elif' condition ':' block;
 else_stmt: 'else' ':' block;
 
-block: stmt | NEWLINE INDENT stmt+ DEDENT;
+block: stmt NEWLINE | NEWLINE INDENT stmt+ DEDENT;
 
 condition:
 	condition 'and' condition

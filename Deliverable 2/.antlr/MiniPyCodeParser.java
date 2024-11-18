@@ -217,26 +217,22 @@ public class MiniPyCodeParser extends Parser {
 			default:
 				throw new NoViableAltException(this);
 			}
-			setState(42); 
+			setState(44);
 			_errHandler.sync(this);
-			_alt = 1;
-			do {
-				switch (_alt) {
-				case 1:
+			_alt = getInterpreter().adaptivePredict(_input,3,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
 					{
 					{
 					setState(41);
 					match(NEWLINE);
 					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+					} 
 				}
-				setState(44); 
+				setState(46);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,3,_ctx);
-			} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -288,42 +284,42 @@ public class MiniPyCodeParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(53);
+			setState(54);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case BOOL:
 				{
-				setState(47);
+				setState(48);
 				match(BOOL);
 				}
 				break;
 			case INT:
 				{
-				setState(48);
+				setState(49);
 				match(INT);
 				}
 				break;
 			case VARNAME:
 				{
-				setState(49);
+				setState(50);
 				match(VARNAME);
 				}
 				break;
 			case DOUBLE:
 				{
-				setState(50);
+				setState(51);
 				match(DOUBLE);
 				}
 				break;
 			case STRING:
 				{
-				setState(51);
+				setState(52);
 				match(STRING);
 				}
 				break;
 			case T__29:
 				{
-				setState(52);
+				setState(53);
 				list();
 				}
 				break;
@@ -331,7 +327,7 @@ public class MiniPyCodeParser extends Parser {
 				throw new NoViableAltException(this);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(60);
+			setState(61);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
@@ -342,9 +338,9 @@ public class MiniPyCodeParser extends Parser {
 					{
 					_localctx = new ExprContext(_parentctx, _parentState);
 					pushNewRecursionContext(_localctx, _startState, RULE_expr);
-					setState(55);
-					if (!(precpred(_ctx, 7))) throw new FailedPredicateException(this, "precpred(_ctx, 7)");
 					setState(56);
+					if (!(precpred(_ctx, 7))) throw new FailedPredicateException(this, "precpred(_ctx, 7)");
+					setState(57);
 					_la = _input.LA(1);
 					if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 62L) != 0)) ) {
 					_errHandler.recoverInline(this);
@@ -354,12 +350,12 @@ public class MiniPyCodeParser extends Parser {
 						_errHandler.reportMatch(this);
 						consume();
 					}
-					setState(57);
+					setState(58);
 					expr(8);
 					}
 					} 
 				}
-				setState(62);
+				setState(63);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
 			}
@@ -395,9 +391,9 @@ public class MiniPyCodeParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(63);
-			match(VARNAME);
 			setState(64);
+			match(VARNAME);
+			setState(65);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 4032L) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -407,7 +403,7 @@ public class MiniPyCodeParser extends Parser {
 				_errHandler.reportMatch(this);
 				consume();
 			}
-			setState(65);
+			setState(66);
 			expr(0);
 			}
 		}
@@ -439,7 +435,7 @@ public class MiniPyCodeParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(67);
+			setState(68);
 			if_context();
 			}
 		}
@@ -481,28 +477,28 @@ public class MiniPyCodeParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(69);
+			setState(70);
 			if_stmt();
-			setState(73);
+			setState(74);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__13) {
 				{
 				{
-				setState(70);
+				setState(71);
 				elif_stmt();
 				}
 				}
-				setState(75);
+				setState(76);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(77);
+			setState(78);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__14) {
 				{
-				setState(76);
+				setState(77);
 				else_stmt();
 				}
 			}
@@ -540,13 +536,13 @@ public class MiniPyCodeParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(79);
-			match(T__11);
 			setState(80);
-			condition(0);
+			match(T__11);
 			setState(81);
-			match(T__12);
+			condition(0);
 			setState(82);
+			match(T__12);
+			setState(83);
 			block();
 			}
 		}
@@ -581,13 +577,13 @@ public class MiniPyCodeParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(84);
-			match(T__13);
 			setState(85);
-			condition(0);
+			match(T__13);
 			setState(86);
-			match(T__12);
+			condition(0);
 			setState(87);
+			match(T__12);
+			setState(88);
 			block();
 			}
 		}
@@ -619,11 +615,11 @@ public class MiniPyCodeParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(89);
-			match(T__14);
 			setState(90);
-			match(T__12);
+			match(T__14);
 			setState(91);
+			match(T__12);
+			setState(92);
 			block();
 			}
 		}
@@ -660,39 +656,41 @@ public class MiniPyCodeParser extends Parser {
 		enterRule(_localctx, 18, RULE_block);
 		int _la;
 		try {
-			setState(103);
+			setState(106);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__11:
 			case VARNAME:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(93);
+				setState(94);
 				stmt();
+				setState(95);
+				match(NEWLINE);
 				}
 				break;
 			case NEWLINE:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(94);
+				setState(97);
 				match(NEWLINE);
-				setState(95);
+				setState(98);
 				match(INDENT);
-				setState(97); 
+				setState(100); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				do {
 					{
 					{
-					setState(96);
+					setState(99);
 					stmt();
 					}
 					}
-					setState(99); 
+					setState(102); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				} while ( _la==T__11 || _la==VARNAME );
-				setState(101);
+				setState(104);
 				match(DEDENT);
 				}
 				break;
@@ -743,24 +741,24 @@ public class MiniPyCodeParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(113);
+			setState(116);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__17:
 				{
-				setState(106);
+				setState(109);
 				match(T__17);
-				setState(107);
+				setState(110);
 				condition(3);
 				}
 				break;
 			case T__18:
 				{
-				setState(108);
+				setState(111);
 				match(T__18);
-				setState(109);
+				setState(112);
 				condition(0);
-				setState(110);
+				setState(113);
 				match(T__19);
 				}
 				break;
@@ -771,7 +769,7 @@ public class MiniPyCodeParser extends Parser {
 			case VARNAME:
 			case STRING:
 				{
-				setState(112);
+				setState(115);
 				comparision();
 				}
 				break;
@@ -779,7 +777,7 @@ public class MiniPyCodeParser extends Parser {
 				throw new NoViableAltException(this);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(123);
+			setState(126);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
@@ -787,18 +785,18 @@ public class MiniPyCodeParser extends Parser {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					setState(121);
+					setState(124);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,11,_ctx) ) {
 					case 1:
 						{
 						_localctx = new ConditionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_condition);
-						setState(115);
+						setState(118);
 						if (!(precpred(_ctx, 5))) throw new FailedPredicateException(this, "precpred(_ctx, 5)");
-						setState(116);
+						setState(119);
 						match(T__15);
-						setState(117);
+						setState(120);
 						condition(6);
 						}
 						break;
@@ -806,18 +804,18 @@ public class MiniPyCodeParser extends Parser {
 						{
 						_localctx = new ConditionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_condition);
-						setState(118);
+						setState(121);
 						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
-						setState(119);
+						setState(122);
 						match(T__16);
-						setState(120);
+						setState(123);
 						condition(5);
 						}
 						break;
 					}
 					} 
 				}
-				setState(125);
+				setState(128);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
 			}
@@ -861,23 +859,23 @@ public class MiniPyCodeParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(126);
+			setState(129);
 			expr(0);
-			setState(132);
+			setState(135);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,13,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(127);
+					setState(130);
 					comp_op();
-					setState(128);
+					setState(131);
 					expr(0);
 					}
 					} 
 				}
-				setState(134);
+				setState(137);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,13,_ctx);
 			}
@@ -906,87 +904,87 @@ public class MiniPyCodeParser extends Parser {
 		Comp_opContext _localctx = new Comp_opContext(_ctx, getState());
 		enterRule(_localctx, 24, RULE_comp_op);
 		try {
-			setState(148);
+			setState(151);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,14,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(135);
+				setState(138);
 				match(T__20);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(136);
+				setState(139);
 				match(T__21);
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(137);
+				setState(140);
 				match(T__22);
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(138);
+				setState(141);
 				match(T__23);
 				}
 				break;
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(139);
+				setState(142);
 				match(T__24);
 				}
 				break;
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(140);
+				setState(143);
 				match(T__25);
 				}
 				break;
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(141);
+				setState(144);
 				match(T__26);
 				}
 				break;
 			case 8:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(142);
+				setState(145);
 				match(T__27);
 				}
 				break;
 			case 9:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(143);
+				setState(146);
 				match(T__17);
-				setState(144);
+				setState(147);
 				match(T__27);
 				}
 				break;
 			case 10:
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(145);
+				setState(148);
 				match(T__28);
 				}
 				break;
 			case 11:
 				enterOuterAlt(_localctx, 11);
 				{
-				setState(146);
+				setState(149);
 				match(T__28);
-				setState(147);
+				setState(150);
 				match(T__17);
 				}
 				break;
@@ -1024,35 +1022,35 @@ public class MiniPyCodeParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(150);
+			setState(153);
 			match(T__29);
-			setState(159);
+			setState(162);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 267361714176L) != 0)) {
 				{
-				setState(151);
+				setState(154);
 				expr(0);
-				setState(156);
+				setState(159);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==T__30) {
 					{
 					{
-					setState(152);
+					setState(155);
 					match(T__30);
-					setState(153);
+					setState(156);
 					expr(0);
 					}
 					}
-					setState(158);
+					setState(161);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
 				}
 			}
 
-			setState(161);
+			setState(164);
 			match(T__31);
 			}
 		}
@@ -1094,105 +1092,106 @@ public class MiniPyCodeParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001)\u00a4\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001)\u00a7\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
 		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
 		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0002"+
 		"\f\u0007\f\u0002\r\u0007\r\u0001\u0000\u0001\u0000\u0005\u0000\u001f\b"+
 		"\u0000\n\u0000\f\u0000\"\t\u0000\u0001\u0000\u0001\u0000\u0001\u0001\u0001"+
-		"\u0001\u0003\u0001(\b\u0001\u0001\u0001\u0004\u0001+\b\u0001\u000b\u0001"+
-		"\f\u0001,\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002"+
-		"\u0001\u0002\u0001\u0002\u0003\u00026\b\u0002\u0001\u0002\u0001\u0002"+
-		"\u0001\u0002\u0005\u0002;\b\u0002\n\u0002\f\u0002>\t\u0002\u0001\u0003"+
-		"\u0001\u0003\u0001\u0003\u0001\u0003\u0001\u0004\u0001\u0004\u0001\u0005"+
-		"\u0001\u0005\u0005\u0005H\b\u0005\n\u0005\f\u0005K\t\u0005\u0001\u0005"+
-		"\u0003\u0005N\b\u0005\u0001\u0006\u0001\u0006\u0001\u0006\u0001\u0006"+
-		"\u0001\u0006\u0001\u0007\u0001\u0007\u0001\u0007\u0001\u0007\u0001\u0007"+
-		"\u0001\b\u0001\b\u0001\b\u0001\b\u0001\t\u0001\t\u0001\t\u0001\t\u0004"+
-		"\tb\b\t\u000b\t\f\tc\u0001\t\u0001\t\u0003\th\b\t\u0001\n\u0001\n\u0001"+
-		"\n\u0001\n\u0001\n\u0001\n\u0001\n\u0001\n\u0003\nr\b\n\u0001\n\u0001"+
-		"\n\u0001\n\u0001\n\u0001\n\u0001\n\u0005\nz\b\n\n\n\f\n}\t\n\u0001\u000b"+
-		"\u0001\u000b\u0001\u000b\u0001\u000b\u0005\u000b\u0083\b\u000b\n\u000b"+
-		"\f\u000b\u0086\t\u000b\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f"+
-		"\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0003\f\u0095"+
-		"\b\f\u0001\r\u0001\r\u0001\r\u0001\r\u0005\r\u009b\b\r\n\r\f\r\u009e\t"+
-		"\r\u0003\r\u00a0\b\r\u0001\r\u0001\r\u0001\r\u0000\u0002\u0004\u0014\u000e"+
-		"\u0000\u0002\u0004\u0006\b\n\f\u000e\u0010\u0012\u0014\u0016\u0018\u001a"+
-		"\u0000\u0002\u0001\u0000\u0001\u0005\u0001\u0000\u0006\u000b\u00b4\u0000"+
-		" \u0001\u0000\u0000\u0000\u0002\'\u0001\u0000\u0000\u0000\u00045\u0001"+
-		"\u0000\u0000\u0000\u0006?\u0001\u0000\u0000\u0000\bC\u0001\u0000\u0000"+
-		"\u0000\nE\u0001\u0000\u0000\u0000\fO\u0001\u0000\u0000\u0000\u000eT\u0001"+
-		"\u0000\u0000\u0000\u0010Y\u0001\u0000\u0000\u0000\u0012g\u0001\u0000\u0000"+
-		"\u0000\u0014q\u0001\u0000\u0000\u0000\u0016~\u0001\u0000\u0000\u0000\u0018"+
-		"\u0094\u0001\u0000\u0000\u0000\u001a\u0096\u0001\u0000\u0000\u0000\u001c"+
-		"\u001f\u0005\'\u0000\u0000\u001d\u001f\u0003\u0002\u0001\u0000\u001e\u001c"+
-		"\u0001\u0000\u0000\u0000\u001e\u001d\u0001\u0000\u0000\u0000\u001f\"\u0001"+
-		"\u0000\u0000\u0000 \u001e\u0001\u0000\u0000\u0000 !\u0001\u0000\u0000"+
-		"\u0000!#\u0001\u0000\u0000\u0000\" \u0001\u0000\u0000\u0000#$\u0005\u0000"+
-		"\u0000\u0001$\u0001\u0001\u0000\u0000\u0000%(\u0003\b\u0004\u0000&(\u0003"+
-		"\u0006\u0003\u0000\'%\u0001\u0000\u0000\u0000\'&\u0001\u0000\u0000\u0000"+
-		"(*\u0001\u0000\u0000\u0000)+\u0005\'\u0000\u0000*)\u0001\u0000\u0000\u0000"+
-		"+,\u0001\u0000\u0000\u0000,*\u0001\u0000\u0000\u0000,-\u0001\u0000\u0000"+
-		"\u0000-\u0003\u0001\u0000\u0000\u0000./\u0006\u0002\uffff\uffff\u0000"+
-		"/6\u0005!\u0000\u000006\u0005\"\u0000\u000016\u0005$\u0000\u000026\u0005"+
-		"#\u0000\u000036\u0005%\u0000\u000046\u0003\u001a\r\u00005.\u0001\u0000"+
-		"\u0000\u000050\u0001\u0000\u0000\u000051\u0001\u0000\u0000\u000052\u0001"+
-		"\u0000\u0000\u000053\u0001\u0000\u0000\u000054\u0001\u0000\u0000\u0000"+
-		"6<\u0001\u0000\u0000\u000078\n\u0007\u0000\u000089\u0007\u0000\u0000\u0000"+
-		"9;\u0003\u0004\u0002\b:7\u0001\u0000\u0000\u0000;>\u0001\u0000\u0000\u0000"+
-		"<:\u0001\u0000\u0000\u0000<=\u0001\u0000\u0000\u0000=\u0005\u0001\u0000"+
-		"\u0000\u0000><\u0001\u0000\u0000\u0000?@\u0005$\u0000\u0000@A\u0007\u0001"+
-		"\u0000\u0000AB\u0003\u0004\u0002\u0000B\u0007\u0001\u0000\u0000\u0000"+
-		"CD\u0003\n\u0005\u0000D\t\u0001\u0000\u0000\u0000EI\u0003\f\u0006\u0000"+
-		"FH\u0003\u000e\u0007\u0000GF\u0001\u0000\u0000\u0000HK\u0001\u0000\u0000"+
-		"\u0000IG\u0001\u0000\u0000\u0000IJ\u0001\u0000\u0000\u0000JM\u0001\u0000"+
-		"\u0000\u0000KI\u0001\u0000\u0000\u0000LN\u0003\u0010\b\u0000ML\u0001\u0000"+
-		"\u0000\u0000MN\u0001\u0000\u0000\u0000N\u000b\u0001\u0000\u0000\u0000"+
-		"OP\u0005\f\u0000\u0000PQ\u0003\u0014\n\u0000QR\u0005\r\u0000\u0000RS\u0003"+
-		"\u0012\t\u0000S\r\u0001\u0000\u0000\u0000TU\u0005\u000e\u0000\u0000UV"+
-		"\u0003\u0014\n\u0000VW\u0005\r\u0000\u0000WX\u0003\u0012\t\u0000X\u000f"+
-		"\u0001\u0000\u0000\u0000YZ\u0005\u000f\u0000\u0000Z[\u0005\r\u0000\u0000"+
-		"[\\\u0003\u0012\t\u0000\\\u0011\u0001\u0000\u0000\u0000]h\u0003\u0002"+
-		"\u0001\u0000^_\u0005\'\u0000\u0000_a\u0005(\u0000\u0000`b\u0003\u0002"+
-		"\u0001\u0000a`\u0001\u0000\u0000\u0000bc\u0001\u0000\u0000\u0000ca\u0001"+
-		"\u0000\u0000\u0000cd\u0001\u0000\u0000\u0000de\u0001\u0000\u0000\u0000"+
-		"ef\u0005)\u0000\u0000fh\u0001\u0000\u0000\u0000g]\u0001\u0000\u0000\u0000"+
-		"g^\u0001\u0000\u0000\u0000h\u0013\u0001\u0000\u0000\u0000ij\u0006\n\uffff"+
-		"\uffff\u0000jk\u0005\u0012\u0000\u0000kr\u0003\u0014\n\u0003lm\u0005\u0013"+
-		"\u0000\u0000mn\u0003\u0014\n\u0000no\u0005\u0014\u0000\u0000or\u0001\u0000"+
-		"\u0000\u0000pr\u0003\u0016\u000b\u0000qi\u0001\u0000\u0000\u0000ql\u0001"+
-		"\u0000\u0000\u0000qp\u0001\u0000\u0000\u0000r{\u0001\u0000\u0000\u0000"+
-		"st\n\u0005\u0000\u0000tu\u0005\u0010\u0000\u0000uz\u0003\u0014\n\u0006"+
-		"vw\n\u0004\u0000\u0000wx\u0005\u0011\u0000\u0000xz\u0003\u0014\n\u0005"+
-		"ys\u0001\u0000\u0000\u0000yv\u0001\u0000\u0000\u0000z}\u0001\u0000\u0000"+
-		"\u0000{y\u0001\u0000\u0000\u0000{|\u0001\u0000\u0000\u0000|\u0015\u0001"+
-		"\u0000\u0000\u0000}{\u0001\u0000\u0000\u0000~\u0084\u0003\u0004\u0002"+
-		"\u0000\u007f\u0080\u0003\u0018\f\u0000\u0080\u0081\u0003\u0004\u0002\u0000"+
-		"\u0081\u0083\u0001\u0000\u0000\u0000\u0082\u007f\u0001\u0000\u0000\u0000"+
-		"\u0083\u0086\u0001\u0000\u0000\u0000\u0084\u0082\u0001\u0000\u0000\u0000"+
-		"\u0084\u0085\u0001\u0000\u0000\u0000\u0085\u0017\u0001\u0000\u0000\u0000"+
-		"\u0086\u0084\u0001\u0000\u0000\u0000\u0087\u0095\u0005\u0015\u0000\u0000"+
-		"\u0088\u0095\u0005\u0016\u0000\u0000\u0089\u0095\u0005\u0017\u0000\u0000"+
-		"\u008a\u0095\u0005\u0018\u0000\u0000\u008b\u0095\u0005\u0019\u0000\u0000"+
-		"\u008c\u0095\u0005\u001a\u0000\u0000\u008d\u0095\u0005\u001b\u0000\u0000"+
-		"\u008e\u0095\u0005\u001c\u0000\u0000\u008f\u0090\u0005\u0012\u0000\u0000"+
-		"\u0090\u0095\u0005\u001c\u0000\u0000\u0091\u0095\u0005\u001d\u0000\u0000"+
-		"\u0092\u0093\u0005\u001d\u0000\u0000\u0093\u0095\u0005\u0012\u0000\u0000"+
-		"\u0094\u0087\u0001\u0000\u0000\u0000\u0094\u0088\u0001\u0000\u0000\u0000"+
-		"\u0094\u0089\u0001\u0000\u0000\u0000\u0094\u008a\u0001\u0000\u0000\u0000"+
-		"\u0094\u008b\u0001\u0000\u0000\u0000\u0094\u008c\u0001\u0000\u0000\u0000"+
-		"\u0094\u008d\u0001\u0000\u0000\u0000\u0094\u008e\u0001\u0000\u0000\u0000"+
-		"\u0094\u008f\u0001\u0000\u0000\u0000\u0094\u0091\u0001\u0000\u0000\u0000"+
-		"\u0094\u0092\u0001\u0000\u0000\u0000\u0095\u0019\u0001\u0000\u0000\u0000"+
-		"\u0096\u009f\u0005\u001e\u0000\u0000\u0097\u009c\u0003\u0004\u0002\u0000"+
-		"\u0098\u0099\u0005\u001f\u0000\u0000\u0099\u009b\u0003\u0004\u0002\u0000"+
-		"\u009a\u0098\u0001\u0000\u0000\u0000\u009b\u009e\u0001\u0000\u0000\u0000"+
-		"\u009c\u009a\u0001\u0000\u0000\u0000\u009c\u009d\u0001\u0000\u0000\u0000"+
-		"\u009d\u00a0\u0001\u0000\u0000\u0000\u009e\u009c\u0001\u0000\u0000\u0000"+
-		"\u009f\u0097\u0001\u0000\u0000\u0000\u009f\u00a0\u0001\u0000\u0000\u0000"+
-		"\u00a0\u00a1\u0001\u0000\u0000\u0000\u00a1\u00a2\u0005 \u0000\u0000\u00a2"+
-		"\u001b\u0001\u0000\u0000\u0000\u0011\u001e \',5<IMcgqy{\u0084\u0094\u009c"+
-		"\u009f";
+		"\u0001\u0003\u0001(\b\u0001\u0001\u0001\u0005\u0001+\b\u0001\n\u0001\f"+
+		"\u0001.\t\u0001\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001"+
+		"\u0002\u0001\u0002\u0001\u0002\u0003\u00027\b\u0002\u0001\u0002\u0001"+
+		"\u0002\u0001\u0002\u0005\u0002<\b\u0002\n\u0002\f\u0002?\t\u0002\u0001"+
+		"\u0003\u0001\u0003\u0001\u0003\u0001\u0003\u0001\u0004\u0001\u0004\u0001"+
+		"\u0005\u0001\u0005\u0005\u0005I\b\u0005\n\u0005\f\u0005L\t\u0005\u0001"+
+		"\u0005\u0003\u0005O\b\u0005\u0001\u0006\u0001\u0006\u0001\u0006\u0001"+
+		"\u0006\u0001\u0006\u0001\u0007\u0001\u0007\u0001\u0007\u0001\u0007\u0001"+
+		"\u0007\u0001\b\u0001\b\u0001\b\u0001\b\u0001\t\u0001\t\u0001\t\u0001\t"+
+		"\u0001\t\u0001\t\u0004\te\b\t\u000b\t\f\tf\u0001\t\u0001\t\u0003\tk\b"+
+		"\t\u0001\n\u0001\n\u0001\n\u0001\n\u0001\n\u0001\n\u0001\n\u0001\n\u0003"+
+		"\nu\b\n\u0001\n\u0001\n\u0001\n\u0001\n\u0001\n\u0001\n\u0005\n}\b\n\n"+
+		"\n\f\n\u0080\t\n\u0001\u000b\u0001\u000b\u0001\u000b\u0001\u000b\u0005"+
+		"\u000b\u0086\b\u000b\n\u000b\f\u000b\u0089\t\u000b\u0001\f\u0001\f\u0001"+
+		"\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001"+
+		"\f\u0001\f\u0003\f\u0098\b\f\u0001\r\u0001\r\u0001\r\u0001\r\u0005\r\u009e"+
+		"\b\r\n\r\f\r\u00a1\t\r\u0003\r\u00a3\b\r\u0001\r\u0001\r\u0001\r\u0000"+
+		"\u0002\u0004\u0014\u000e\u0000\u0002\u0004\u0006\b\n\f\u000e\u0010\u0012"+
+		"\u0014\u0016\u0018\u001a\u0000\u0002\u0001\u0000\u0001\u0005\u0001\u0000"+
+		"\u0006\u000b\u00b7\u0000 \u0001\u0000\u0000\u0000\u0002\'\u0001\u0000"+
+		"\u0000\u0000\u00046\u0001\u0000\u0000\u0000\u0006@\u0001\u0000\u0000\u0000"+
+		"\bD\u0001\u0000\u0000\u0000\nF\u0001\u0000\u0000\u0000\fP\u0001\u0000"+
+		"\u0000\u0000\u000eU\u0001\u0000\u0000\u0000\u0010Z\u0001\u0000\u0000\u0000"+
+		"\u0012j\u0001\u0000\u0000\u0000\u0014t\u0001\u0000\u0000\u0000\u0016\u0081"+
+		"\u0001\u0000\u0000\u0000\u0018\u0097\u0001\u0000\u0000\u0000\u001a\u0099"+
+		"\u0001\u0000\u0000\u0000\u001c\u001f\u0005\'\u0000\u0000\u001d\u001f\u0003"+
+		"\u0002\u0001\u0000\u001e\u001c\u0001\u0000\u0000\u0000\u001e\u001d\u0001"+
+		"\u0000\u0000\u0000\u001f\"\u0001\u0000\u0000\u0000 \u001e\u0001\u0000"+
+		"\u0000\u0000 !\u0001\u0000\u0000\u0000!#\u0001\u0000\u0000\u0000\" \u0001"+
+		"\u0000\u0000\u0000#$\u0005\u0000\u0000\u0001$\u0001\u0001\u0000\u0000"+
+		"\u0000%(\u0003\b\u0004\u0000&(\u0003\u0006\u0003\u0000\'%\u0001\u0000"+
+		"\u0000\u0000\'&\u0001\u0000\u0000\u0000(,\u0001\u0000\u0000\u0000)+\u0005"+
+		"\'\u0000\u0000*)\u0001\u0000\u0000\u0000+.\u0001\u0000\u0000\u0000,*\u0001"+
+		"\u0000\u0000\u0000,-\u0001\u0000\u0000\u0000-\u0003\u0001\u0000\u0000"+
+		"\u0000.,\u0001\u0000\u0000\u0000/0\u0006\u0002\uffff\uffff\u000007\u0005"+
+		"!\u0000\u000017\u0005\"\u0000\u000027\u0005$\u0000\u000037\u0005#\u0000"+
+		"\u000047\u0005%\u0000\u000057\u0003\u001a\r\u00006/\u0001\u0000\u0000"+
+		"\u000061\u0001\u0000\u0000\u000062\u0001\u0000\u0000\u000063\u0001\u0000"+
+		"\u0000\u000064\u0001\u0000\u0000\u000065\u0001\u0000\u0000\u00007=\u0001"+
+		"\u0000\u0000\u000089\n\u0007\u0000\u00009:\u0007\u0000\u0000\u0000:<\u0003"+
+		"\u0004\u0002\b;8\u0001\u0000\u0000\u0000<?\u0001\u0000\u0000\u0000=;\u0001"+
+		"\u0000\u0000\u0000=>\u0001\u0000\u0000\u0000>\u0005\u0001\u0000\u0000"+
+		"\u0000?=\u0001\u0000\u0000\u0000@A\u0005$\u0000\u0000AB\u0007\u0001\u0000"+
+		"\u0000BC\u0003\u0004\u0002\u0000C\u0007\u0001\u0000\u0000\u0000DE\u0003"+
+		"\n\u0005\u0000E\t\u0001\u0000\u0000\u0000FJ\u0003\f\u0006\u0000GI\u0003"+
+		"\u000e\u0007\u0000HG\u0001\u0000\u0000\u0000IL\u0001\u0000\u0000\u0000"+
+		"JH\u0001\u0000\u0000\u0000JK\u0001\u0000\u0000\u0000KN\u0001\u0000\u0000"+
+		"\u0000LJ\u0001\u0000\u0000\u0000MO\u0003\u0010\b\u0000NM\u0001\u0000\u0000"+
+		"\u0000NO\u0001\u0000\u0000\u0000O\u000b\u0001\u0000\u0000\u0000PQ\u0005"+
+		"\f\u0000\u0000QR\u0003\u0014\n\u0000RS\u0005\r\u0000\u0000ST\u0003\u0012"+
+		"\t\u0000T\r\u0001\u0000\u0000\u0000UV\u0005\u000e\u0000\u0000VW\u0003"+
+		"\u0014\n\u0000WX\u0005\r\u0000\u0000XY\u0003\u0012\t\u0000Y\u000f\u0001"+
+		"\u0000\u0000\u0000Z[\u0005\u000f\u0000\u0000[\\\u0005\r\u0000\u0000\\"+
+		"]\u0003\u0012\t\u0000]\u0011\u0001\u0000\u0000\u0000^_\u0003\u0002\u0001"+
+		"\u0000_`\u0005\'\u0000\u0000`k\u0001\u0000\u0000\u0000ab\u0005\'\u0000"+
+		"\u0000bd\u0005(\u0000\u0000ce\u0003\u0002\u0001\u0000dc\u0001\u0000\u0000"+
+		"\u0000ef\u0001\u0000\u0000\u0000fd\u0001\u0000\u0000\u0000fg\u0001\u0000"+
+		"\u0000\u0000gh\u0001\u0000\u0000\u0000hi\u0005)\u0000\u0000ik\u0001\u0000"+
+		"\u0000\u0000j^\u0001\u0000\u0000\u0000ja\u0001\u0000\u0000\u0000k\u0013"+
+		"\u0001\u0000\u0000\u0000lm\u0006\n\uffff\uffff\u0000mn\u0005\u0012\u0000"+
+		"\u0000nu\u0003\u0014\n\u0003op\u0005\u0013\u0000\u0000pq\u0003\u0014\n"+
+		"\u0000qr\u0005\u0014\u0000\u0000ru\u0001\u0000\u0000\u0000su\u0003\u0016"+
+		"\u000b\u0000tl\u0001\u0000\u0000\u0000to\u0001\u0000\u0000\u0000ts\u0001"+
+		"\u0000\u0000\u0000u~\u0001\u0000\u0000\u0000vw\n\u0005\u0000\u0000wx\u0005"+
+		"\u0010\u0000\u0000x}\u0003\u0014\n\u0006yz\n\u0004\u0000\u0000z{\u0005"+
+		"\u0011\u0000\u0000{}\u0003\u0014\n\u0005|v\u0001\u0000\u0000\u0000|y\u0001"+
+		"\u0000\u0000\u0000}\u0080\u0001\u0000\u0000\u0000~|\u0001\u0000\u0000"+
+		"\u0000~\u007f\u0001\u0000\u0000\u0000\u007f\u0015\u0001\u0000\u0000\u0000"+
+		"\u0080~\u0001\u0000\u0000\u0000\u0081\u0087\u0003\u0004\u0002\u0000\u0082"+
+		"\u0083\u0003\u0018\f\u0000\u0083\u0084\u0003\u0004\u0002\u0000\u0084\u0086"+
+		"\u0001\u0000\u0000\u0000\u0085\u0082\u0001\u0000\u0000\u0000\u0086\u0089"+
+		"\u0001\u0000\u0000\u0000\u0087\u0085\u0001\u0000\u0000\u0000\u0087\u0088"+
+		"\u0001\u0000\u0000\u0000\u0088\u0017\u0001\u0000\u0000\u0000\u0089\u0087"+
+		"\u0001\u0000\u0000\u0000\u008a\u0098\u0005\u0015\u0000\u0000\u008b\u0098"+
+		"\u0005\u0016\u0000\u0000\u008c\u0098\u0005\u0017\u0000\u0000\u008d\u0098"+
+		"\u0005\u0018\u0000\u0000\u008e\u0098\u0005\u0019\u0000\u0000\u008f\u0098"+
+		"\u0005\u001a\u0000\u0000\u0090\u0098\u0005\u001b\u0000\u0000\u0091\u0098"+
+		"\u0005\u001c\u0000\u0000\u0092\u0093\u0005\u0012\u0000\u0000\u0093\u0098"+
+		"\u0005\u001c\u0000\u0000\u0094\u0098\u0005\u001d\u0000\u0000\u0095\u0096"+
+		"\u0005\u001d\u0000\u0000\u0096\u0098\u0005\u0012\u0000\u0000\u0097\u008a"+
+		"\u0001\u0000\u0000\u0000\u0097\u008b\u0001\u0000\u0000\u0000\u0097\u008c"+
+		"\u0001\u0000\u0000\u0000\u0097\u008d\u0001\u0000\u0000\u0000\u0097\u008e"+
+		"\u0001\u0000\u0000\u0000\u0097\u008f\u0001\u0000\u0000\u0000\u0097\u0090"+
+		"\u0001\u0000\u0000\u0000\u0097\u0091\u0001\u0000\u0000\u0000\u0097\u0092"+
+		"\u0001\u0000\u0000\u0000\u0097\u0094\u0001\u0000\u0000\u0000\u0097\u0095"+
+		"\u0001\u0000\u0000\u0000\u0098\u0019\u0001\u0000\u0000\u0000\u0099\u00a2"+
+		"\u0005\u001e\u0000\u0000\u009a\u009f\u0003\u0004\u0002\u0000\u009b\u009c"+
+		"\u0005\u001f\u0000\u0000\u009c\u009e\u0003\u0004\u0002\u0000\u009d\u009b"+
+		"\u0001\u0000\u0000\u0000\u009e\u00a1\u0001\u0000\u0000\u0000\u009f\u009d"+
+		"\u0001\u0000\u0000\u0000\u009f\u00a0\u0001\u0000\u0000\u0000\u00a0\u00a3"+
+		"\u0001\u0000\u0000\u0000\u00a1\u009f\u0001\u0000\u0000\u0000\u00a2\u009a"+
+		"\u0001\u0000\u0000\u0000\u00a2\u00a3\u0001\u0000\u0000\u0000\u00a3\u00a4"+
+		"\u0001\u0000\u0000\u0000\u00a4\u00a5\u0005 \u0000\u0000\u00a5\u001b\u0001"+
+		"\u0000\u0000\u0000\u0011\u001e \',6=JNfjt|~\u0087\u0097\u009f\u00a2";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

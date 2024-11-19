@@ -6,7 +6,7 @@ tokens {
 }
 
 prog: (NEWLINE | stmt)* EOF;
-stmt: (comp_stmt | assignment | comment | loop_stmt) NEWLINE*;
+stmt: (comp_stmt | assignment | comment) NEWLINE*;
 
 expr:
 	expr ('+' | '-' | '*' | '/' | '%') expr
@@ -19,20 +19,16 @@ expr:
 assignment:
 	VARNAME ('=' | '+=' | '-=' | '*=' | '/=' | '%=') expr;
 
-comp_stmt: if_context;
+comp_stmt: if_context | while_stmt | for_stmt;
 if_context: if_stmt (elif_stmt)* (else_stmt)?;
 if_stmt: 'if' condition ':' block;
 elif_stmt: 'elif' condition ':' block;
 else_stmt: 'else' ':' block;
 
-loop_stmt: while_stmt | for_stmt ;
 while_stmt: 'while' condition ':' block;
 for_stmt: 'for' VARNAME 'in' (expr | RANGE) ':' block;
 
-comment: LINE_COMMENT | BLOCK_COMMENT;
-
 block: stmt NEWLINE | NEWLINE INDENT stmt+ DEDENT;
-
 
 condition:
 	condition 'and' condition
@@ -54,10 +50,9 @@ comp_op:
 	| 'not' 'in'
 	| 'is'
 	| 'is' 'not';
+comment: LINE_COMMENT | BLOCK_COMMENT;
 
 list: '[' (expr (',' expr)*)? ']';
-
-
 
 BOOL: 'True' | 'False';
 INT: '-'? [0-9]+;
@@ -65,7 +60,7 @@ DOUBLE: '-'? [0-9]+ '.' [0-9]+;
 VARNAME: [a-zA-Z_][a-zA-Z_0-9]*;
 STRING: ('"' (~["\r\n\\])* '"') | ('\'' (~['\r\n\\])* '\'');
 RANGE : 'range(' INT (',' INT (',' INT)? )? ')';
-BLOCK_COMMENT : '\'\'\'' .*? '\'\'\'' -> skip;
+BLOCK_COMMENT : (('\'\'\'' .*? '\'\'\'') | ('"""' .*? '"""')) -> skip;
 LINE_COMMENT : '#' ~[\r\n]* -> skip;
 
 WS: [ \t]+ -> skip;

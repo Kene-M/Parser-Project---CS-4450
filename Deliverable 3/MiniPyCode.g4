@@ -1,35 +1,38 @@
 grammar MiniPyCode;
 
-program: stmt* EOF;
-stmt: (assignment | comp_stmt | loop_stmt) NEWLINE?;
+tokens {
+	INDENT,
+	DEDENT
+}
 
-expr: expr ('+'|'-'|'*'|'/'|'%') expr
+prog: (NEWLINE | stmt)* EOF;
+stmt: (comp_stmt | assignment) NEWLINE*;
+
+expr: expr ('*' | '/' | '%') expr // High precedence
+    | expr ('+' | '-') expr       // Lower precedence
     | BOOL | INT | VARNAME | DOUBLE | STRING | list;
 
 assignment: VARNAME ('=' | '+=' | '-=' | '*='| '/=' | '%=') expr;
 
-comp_stmt: if_stmt;
-
-if_stmt: 'if' condition ':' block 
-         ('elif' condition ':' block)* 
-         ('else' ':' block)?;
-
-block:  (TAB stmt)+;
-
-loop_stmt: while_stmt | for_stmt;
+comp_stmt: if_context | while_stmt | for_stmt;
+if_context: if_stmt (elif_stmt)* (else_stmt)?;
+if_stmt: 'if' condition ':' block;
+elif_stmt: 'elif' condition ':' block;
+else_stmt: 'else' ':' block;
 
 while_stmt: 'while' condition ':' block;
-
 for_stmt: 'for' VARNAME 'in' (expr | RANGE) ':' block;
 
-condition: condition 'and' condition
-    | condition 'or' condition
-    | 'not' condition
-    | '(' condition ')'
-    | comparison;
+block: stmt NEWLINE | NEWLINE INDENT stmt+ DEDENT;
+
+condition:
+	condition 'and' condition
+	| condition 'or' condition
+	| 'not' condition
+	| '(' condition ')'
+	| comparison;
 
 comparison: expr (comp_op expr)*;
-
 comp_op: '<' | '>' | '==' | '>=' | '<=' | '<>' | '!=' | 'in' | 'not' 'in' | 'is' | 'is' 'not';
 
 list: '[' (expr (',' expr)*)? ']';
@@ -38,10 +41,9 @@ BOOL: 'True' | 'False';
 INT: '-'? [0-9]+;
 DOUBLE: '-'? [0-9]+ '.' [0-9]+;
 VARNAME: [a-zA-Z_][a-zA-Z_0-9]*;
+STRING: ('"' (~["\r\n\\])* '"') | ('\'' (~['\r\n\\])* '\'');
+RANGE : 'range(' INT (',' INT (',' INT)? )? ')';
 
-STRING: ('"' (~["\\])* '"') | ('\'' (~['\\])* '\'');
-
-TAB: [\t]+ ;
-NEWLINE : [\r\n];
-WS : [ \r\n]+ -> skip;
-RANGE : 'range(' INT ',' INT ')' ;
+WS: [ \t]+ -> skip;
+NEWLINE:
+	({self.atStartOfInput()}? WS | ('\r'? '\n' | '\r' | '\f') WS?) {self.onNewLine()};

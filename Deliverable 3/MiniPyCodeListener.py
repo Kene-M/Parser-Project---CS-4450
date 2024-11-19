@@ -89,6 +89,15 @@ class MiniPyCodeListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MiniPyCodeParser#loop_stmt.
+    def enterLoop_stmt(self, ctx:MiniPyCodeParser.Loop_stmtContext):
+        pass
+
+    # Exit a parse tree produced by MiniPyCodeParser#loop_stmt.
+    def exitLoop_stmt(self, ctx:MiniPyCodeParser.Loop_stmtContext):
+        pass
+
+
     # Enter a parse tree produced by MiniPyCodeParser#while_stmt.
     def enterWhile_stmt(self, ctx:MiniPyCodeParser.While_stmtContext):
         pass
@@ -104,6 +113,15 @@ class MiniPyCodeListener(ParseTreeListener):
 
     # Exit a parse tree produced by MiniPyCodeParser#for_stmt.
     def exitFor_stmt(self, ctx:MiniPyCodeParser.For_stmtContext):
+        pass
+
+
+    # Enter a parse tree produced by MiniPyCodeParser#comment.
+    def enterComment(self, ctx:MiniPyCodeParser.CommentContext):
+        pass
+
+    # Exit a parse tree produced by MiniPyCodeParser#comment.
+    def exitComment(self, ctx:MiniPyCodeParser.CommentContext):
         pass
 
 
@@ -125,12 +143,12 @@ class MiniPyCodeListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MiniPyCodeParser#comparison.
-    def enterComparison(self, ctx:MiniPyCodeParser.ComparisonContext):
+    # Enter a parse tree produced by MiniPyCodeParser#comparision.
+    def enterComparision(self, ctx:MiniPyCodeParser.ComparisionContext):
         pass
 
-    # Exit a parse tree produced by MiniPyCodeParser#comparison.
-    def exitComparison(self, ctx:MiniPyCodeParser.ComparisonContext):
+    # Exit a parse tree produced by MiniPyCodeParser#comparision.
+    def exitComparision(self, ctx:MiniPyCodeParser.ComparisionContext):
         pass
 
 

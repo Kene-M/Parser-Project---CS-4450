@@ -10,65 +10,65 @@ else:
 
 def serializedATN():
     return [
-        4,1,41,167,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,41,168,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         1,0,1,0,5,0,31,8,0,10,0,12,0,34,9,0,1,0,1,0,1,1,1,1,3,1,40,8,1,1,
         1,5,1,43,8,1,10,1,12,1,46,9,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,55,
         8,2,1,2,1,2,1,2,5,2,60,8,2,10,2,12,2,63,9,2,1,3,1,3,1,3,1,3,1,4,
         1,4,1,5,1,5,5,5,73,8,5,10,5,12,5,76,9,5,1,5,3,5,79,8,5,1,6,1,6,1,
         6,1,6,1,6,1,7,1,7,1,7,1,7,1,7,1,8,1,8,1,8,1,8,1,9,1,9,1,9,1,9,1,
-        9,1,9,4,9,101,8,9,11,9,12,9,102,1,9,1,9,3,9,107,8,9,1,10,1,10,1,
-        10,1,10,1,10,1,10,1,10,1,10,3,10,117,8,10,1,10,1,10,1,10,1,10,1,
-        10,1,10,5,10,125,8,10,10,10,12,10,128,9,10,1,11,1,11,1,11,1,11,5,
-        11,134,8,11,10,11,12,11,137,9,11,1,12,1,12,1,12,1,12,1,12,1,12,1,
-        12,1,12,1,12,1,12,1,12,1,12,1,12,3,12,152,8,12,1,13,1,13,1,13,1,
-        13,5,13,158,8,13,10,13,12,13,161,9,13,3,13,163,8,13,1,13,1,13,1,
-        13,0,2,4,20,14,0,2,4,6,8,10,12,14,16,18,20,22,24,26,0,2,1,0,1,5,
-        1,0,6,11,183,0,32,1,0,0,0,2,39,1,0,0,0,4,54,1,0,0,0,6,64,1,0,0,0,
-        8,68,1,0,0,0,10,70,1,0,0,0,12,80,1,0,0,0,14,85,1,0,0,0,16,90,1,0,
-        0,0,18,106,1,0,0,0,20,116,1,0,0,0,22,129,1,0,0,0,24,151,1,0,0,0,
-        26,153,1,0,0,0,28,31,5,39,0,0,29,31,3,2,1,0,30,28,1,0,0,0,30,29,
-        1,0,0,0,31,34,1,0,0,0,32,30,1,0,0,0,32,33,1,0,0,0,33,35,1,0,0,0,
-        34,32,1,0,0,0,35,36,5,0,0,1,36,1,1,0,0,0,37,40,3,8,4,0,38,40,3,6,
-        3,0,39,37,1,0,0,0,39,38,1,0,0,0,40,44,1,0,0,0,41,43,5,39,0,0,42,
-        41,1,0,0,0,43,46,1,0,0,0,44,42,1,0,0,0,44,45,1,0,0,0,45,3,1,0,0,
-        0,46,44,1,0,0,0,47,48,6,2,-1,0,48,55,5,33,0,0,49,55,5,34,0,0,50,
-        55,5,36,0,0,51,55,5,35,0,0,52,55,5,37,0,0,53,55,3,26,13,0,54,47,
-        1,0,0,0,54,49,1,0,0,0,54,50,1,0,0,0,54,51,1,0,0,0,54,52,1,0,0,0,
-        54,53,1,0,0,0,55,61,1,0,0,0,56,57,10,7,0,0,57,58,7,0,0,0,58,60,3,
-        4,2,8,59,56,1,0,0,0,60,63,1,0,0,0,61,59,1,0,0,0,61,62,1,0,0,0,62,
-        5,1,0,0,0,63,61,1,0,0,0,64,65,5,36,0,0,65,66,7,1,0,0,66,67,3,4,2,
-        0,67,7,1,0,0,0,68,69,3,10,5,0,69,9,1,0,0,0,70,74,3,12,6,0,71,73,
-        3,14,7,0,72,71,1,0,0,0,73,76,1,0,0,0,74,72,1,0,0,0,74,75,1,0,0,0,
-        75,78,1,0,0,0,76,74,1,0,0,0,77,79,3,16,8,0,78,77,1,0,0,0,78,79,1,
-        0,0,0,79,11,1,0,0,0,80,81,5,12,0,0,81,82,3,20,10,0,82,83,5,13,0,
-        0,83,84,3,18,9,0,84,13,1,0,0,0,85,86,5,14,0,0,86,87,3,20,10,0,87,
-        88,5,13,0,0,88,89,3,18,9,0,89,15,1,0,0,0,90,91,5,15,0,0,91,92,5,
-        13,0,0,92,93,3,18,9,0,93,17,1,0,0,0,94,95,3,2,1,0,95,96,5,39,0,0,
-        96,107,1,0,0,0,97,98,5,39,0,0,98,100,5,40,0,0,99,101,3,2,1,0,100,
-        99,1,0,0,0,101,102,1,0,0,0,102,100,1,0,0,0,102,103,1,0,0,0,103,104,
-        1,0,0,0,104,105,5,41,0,0,105,107,1,0,0,0,106,94,1,0,0,0,106,97,1,
-        0,0,0,107,19,1,0,0,0,108,109,6,10,-1,0,109,110,5,18,0,0,110,117,
-        3,20,10,3,111,112,5,19,0,0,112,113,3,20,10,0,113,114,5,20,0,0,114,
-        117,1,0,0,0,115,117,3,22,11,0,116,108,1,0,0,0,116,111,1,0,0,0,116,
-        115,1,0,0,0,117,126,1,0,0,0,118,119,10,5,0,0,119,120,5,16,0,0,120,
-        125,3,20,10,6,121,122,10,4,0,0,122,123,5,17,0,0,123,125,3,20,10,
-        5,124,118,1,0,0,0,124,121,1,0,0,0,125,128,1,0,0,0,126,124,1,0,0,
-        0,126,127,1,0,0,0,127,21,1,0,0,0,128,126,1,0,0,0,129,135,3,4,2,0,
-        130,131,3,24,12,0,131,132,3,4,2,0,132,134,1,0,0,0,133,130,1,0,0,
-        0,134,137,1,0,0,0,135,133,1,0,0,0,135,136,1,0,0,0,136,23,1,0,0,0,
-        137,135,1,0,0,0,138,152,5,21,0,0,139,152,5,22,0,0,140,152,5,23,0,
-        0,141,152,5,24,0,0,142,152,5,25,0,0,143,152,5,26,0,0,144,152,5,27,
-        0,0,145,152,5,28,0,0,146,147,5,18,0,0,147,152,5,28,0,0,148,152,5,
-        29,0,0,149,150,5,29,0,0,150,152,5,18,0,0,151,138,1,0,0,0,151,139,
-        1,0,0,0,151,140,1,0,0,0,151,141,1,0,0,0,151,142,1,0,0,0,151,143,
-        1,0,0,0,151,144,1,0,0,0,151,145,1,0,0,0,151,146,1,0,0,0,151,148,
-        1,0,0,0,151,149,1,0,0,0,152,25,1,0,0,0,153,162,5,30,0,0,154,159,
-        3,4,2,0,155,156,5,31,0,0,156,158,3,4,2,0,157,155,1,0,0,0,158,161,
-        1,0,0,0,159,157,1,0,0,0,159,160,1,0,0,0,160,163,1,0,0,0,161,159,
-        1,0,0,0,162,154,1,0,0,0,162,163,1,0,0,0,163,164,1,0,0,0,164,165,
-        5,32,0,0,165,27,1,0,0,0,17,30,32,39,44,54,61,74,78,102,106,116,124,
-        126,135,151,159,162
+        9,1,9,4,9,101,8,9,11,9,12,9,102,1,9,3,9,106,8,9,3,9,108,8,9,1,10,
+        1,10,1,10,1,10,1,10,1,10,1,10,1,10,3,10,118,8,10,1,10,1,10,1,10,
+        1,10,1,10,1,10,5,10,126,8,10,10,10,12,10,129,9,10,1,11,1,11,1,11,
+        1,11,5,11,135,8,11,10,11,12,11,138,9,11,1,12,1,12,1,12,1,12,1,12,
+        1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,3,12,153,8,12,1,13,1,13,
+        1,13,1,13,5,13,159,8,13,10,13,12,13,162,9,13,3,13,164,8,13,1,13,
+        1,13,1,13,0,2,4,20,14,0,2,4,6,8,10,12,14,16,18,20,22,24,26,0,2,1,
+        0,1,5,1,0,6,11,185,0,32,1,0,0,0,2,39,1,0,0,0,4,54,1,0,0,0,6,64,1,
+        0,0,0,8,68,1,0,0,0,10,70,1,0,0,0,12,80,1,0,0,0,14,85,1,0,0,0,16,
+        90,1,0,0,0,18,107,1,0,0,0,20,117,1,0,0,0,22,130,1,0,0,0,24,152,1,
+        0,0,0,26,154,1,0,0,0,28,31,5,39,0,0,29,31,3,2,1,0,30,28,1,0,0,0,
+        30,29,1,0,0,0,31,34,1,0,0,0,32,30,1,0,0,0,32,33,1,0,0,0,33,35,1,
+        0,0,0,34,32,1,0,0,0,35,36,5,0,0,1,36,1,1,0,0,0,37,40,3,8,4,0,38,
+        40,3,6,3,0,39,37,1,0,0,0,39,38,1,0,0,0,40,44,1,0,0,0,41,43,5,39,
+        0,0,42,41,1,0,0,0,43,46,1,0,0,0,44,42,1,0,0,0,44,45,1,0,0,0,45,3,
+        1,0,0,0,46,44,1,0,0,0,47,48,6,2,-1,0,48,55,5,33,0,0,49,55,5,34,0,
+        0,50,55,5,36,0,0,51,55,5,35,0,0,52,55,5,37,0,0,53,55,3,26,13,0,54,
+        47,1,0,0,0,54,49,1,0,0,0,54,50,1,0,0,0,54,51,1,0,0,0,54,52,1,0,0,
+        0,54,53,1,0,0,0,55,61,1,0,0,0,56,57,10,7,0,0,57,58,7,0,0,0,58,60,
+        3,4,2,8,59,56,1,0,0,0,60,63,1,0,0,0,61,59,1,0,0,0,61,62,1,0,0,0,
+        62,5,1,0,0,0,63,61,1,0,0,0,64,65,5,36,0,0,65,66,7,1,0,0,66,67,3,
+        4,2,0,67,7,1,0,0,0,68,69,3,10,5,0,69,9,1,0,0,0,70,74,3,12,6,0,71,
+        73,3,14,7,0,72,71,1,0,0,0,73,76,1,0,0,0,74,72,1,0,0,0,74,75,1,0,
+        0,0,75,78,1,0,0,0,76,74,1,0,0,0,77,79,3,16,8,0,78,77,1,0,0,0,78,
+        79,1,0,0,0,79,11,1,0,0,0,80,81,5,12,0,0,81,82,3,20,10,0,82,83,5,
+        13,0,0,83,84,3,18,9,0,84,13,1,0,0,0,85,86,5,14,0,0,86,87,3,20,10,
+        0,87,88,5,13,0,0,88,89,3,18,9,0,89,15,1,0,0,0,90,91,5,15,0,0,91,
+        92,5,13,0,0,92,93,3,18,9,0,93,17,1,0,0,0,94,95,3,2,1,0,95,96,5,39,
+        0,0,96,108,1,0,0,0,97,98,5,39,0,0,98,100,5,40,0,0,99,101,3,2,1,0,
+        100,99,1,0,0,0,101,102,1,0,0,0,102,100,1,0,0,0,102,103,1,0,0,0,103,
+        105,1,0,0,0,104,106,5,41,0,0,105,104,1,0,0,0,105,106,1,0,0,0,106,
+        108,1,0,0,0,107,94,1,0,0,0,107,97,1,0,0,0,108,19,1,0,0,0,109,110,
+        6,10,-1,0,110,111,5,18,0,0,111,118,3,20,10,3,112,113,5,19,0,0,113,
+        114,3,20,10,0,114,115,5,20,0,0,115,118,1,0,0,0,116,118,3,22,11,0,
+        117,109,1,0,0,0,117,112,1,0,0,0,117,116,1,0,0,0,118,127,1,0,0,0,
+        119,120,10,5,0,0,120,121,5,16,0,0,121,126,3,20,10,6,122,123,10,4,
+        0,0,123,124,5,17,0,0,124,126,3,20,10,5,125,119,1,0,0,0,125,122,1,
+        0,0,0,126,129,1,0,0,0,127,125,1,0,0,0,127,128,1,0,0,0,128,21,1,0,
+        0,0,129,127,1,0,0,0,130,136,3,4,2,0,131,132,3,24,12,0,132,133,3,
+        4,2,0,133,135,1,0,0,0,134,131,1,0,0,0,135,138,1,0,0,0,136,134,1,
+        0,0,0,136,137,1,0,0,0,137,23,1,0,0,0,138,136,1,0,0,0,139,153,5,21,
+        0,0,140,153,5,22,0,0,141,153,5,23,0,0,142,153,5,24,0,0,143,153,5,
+        25,0,0,144,153,5,26,0,0,145,153,5,27,0,0,146,153,5,28,0,0,147,148,
+        5,18,0,0,148,153,5,28,0,0,149,153,5,29,0,0,150,151,5,29,0,0,151,
+        153,5,18,0,0,152,139,1,0,0,0,152,140,1,0,0,0,152,141,1,0,0,0,152,
+        142,1,0,0,0,152,143,1,0,0,0,152,144,1,0,0,0,152,145,1,0,0,0,152,
+        146,1,0,0,0,152,147,1,0,0,0,152,149,1,0,0,0,152,150,1,0,0,0,153,
+        25,1,0,0,0,154,163,5,30,0,0,155,160,3,4,2,0,156,157,5,31,0,0,157,
+        159,3,4,2,0,158,156,1,0,0,0,159,162,1,0,0,0,160,158,1,0,0,0,160,
+        161,1,0,0,0,161,164,1,0,0,0,162,160,1,0,0,0,163,155,1,0,0,0,163,
+        164,1,0,0,0,164,165,1,0,0,0,165,166,5,32,0,0,166,27,1,0,0,0,18,30,
+        32,39,44,54,61,74,78,102,105,107,117,125,127,136,152,160,163
     ]
 
 class MiniPyCodeParser ( Parser ):
@@ -581,25 +581,25 @@ class MiniPyCodeParser ( Parser ):
 
         localctx = MiniPyCodeParser.If_contextContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_if_context)
-        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 70
             self.if_stmt()
             self.state = 74
             self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==14:
-                self.state = 71
-                self.elif_stmt()
+            _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    self.state = 71
+                    self.elif_stmt() 
                 self.state = 76
                 self._errHandler.sync(self)
-                _la = self._input.LA(1)
+                _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
 
             self.state = 78
             self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==15:
+            la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
+            if la_ == 1:
                 self.state = 77
                 self.else_stmt()
 
@@ -804,9 +804,8 @@ class MiniPyCodeParser ( Parser ):
 
         localctx = MiniPyCodeParser.BlockContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_block)
-        self._la = 0 # Token type
         try:
-            self.state = 106
+            self.state = 107
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [12, 36]:
@@ -824,18 +823,26 @@ class MiniPyCodeParser ( Parser ):
                 self.match(MiniPyCodeParser.INDENT)
                 self.state = 100 
                 self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                while True:
-                    self.state = 99
-                    self.stmt()
+                _alt = 1
+                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
+                        self.state = 99
+                        self.stmt()
+
+                    else:
+                        raise NoViableAltException(self)
                     self.state = 102 
                     self._errHandler.sync(self)
-                    _la = self._input.LA(1)
-                    if not (_la==12 or _la==36):
-                        break
+                    _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
 
-                self.state = 104
-                self.match(MiniPyCodeParser.DEDENT)
+                self.state = 105
+                self._errHandler.sync(self)
+                la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
+                if la_ == 1:
+                    self.state = 104
+                    self.match(MiniPyCodeParser.DEDENT)
+
+
                 pass
             else:
                 raise NoViableAltException(self)
@@ -889,72 +896,72 @@ class MiniPyCodeParser ( Parser ):
         self.enterRecursionRule(localctx, 20, self.RULE_condition, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 116
+            self.state = 117
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [18]:
-                self.state = 109
-                self.match(MiniPyCodeParser.T__17)
                 self.state = 110
+                self.match(MiniPyCodeParser.T__17)
+                self.state = 111
                 self.condition(3)
                 pass
             elif token in [19]:
-                self.state = 111
-                self.match(MiniPyCodeParser.T__18)
                 self.state = 112
-                self.condition(0)
+                self.match(MiniPyCodeParser.T__18)
                 self.state = 113
+                self.condition(0)
+                self.state = 114
                 self.match(MiniPyCodeParser.T__19)
                 pass
             elif token in [30, 33, 34, 35, 36, 37]:
-                self.state = 115
+                self.state = 116
                 self.comparision()
                 pass
             else:
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 126
+            self.state = 127
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 124
+                    self.state = 125
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
                     if la_ == 1:
                         localctx = MiniPyCodeParser.ConditionContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_condition)
-                        self.state = 118
+                        self.state = 119
                         if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 119
-                        self.match(MiniPyCodeParser.T__15)
                         self.state = 120
+                        self.match(MiniPyCodeParser.T__15)
+                        self.state = 121
                         self.condition(6)
                         pass
 
                     elif la_ == 2:
                         localctx = MiniPyCodeParser.ConditionContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_condition)
-                        self.state = 121
+                        self.state = 122
                         if not self.precpred(self._ctx, 4):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                        self.state = 122
-                        self.match(MiniPyCodeParser.T__16)
                         self.state = 123
+                        self.match(MiniPyCodeParser.T__16)
+                        self.state = 124
                         self.condition(5)
                         pass
 
              
-                self.state = 128
+                self.state = 129
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1006,20 +1013,20 @@ class MiniPyCodeParser ( Parser ):
         self.enterRule(localctx, 22, self.RULE_comparision)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 129
+            self.state = 130
             self.expr(0)
-            self.state = 135
+            self.state = 136
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,14,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 130
-                    self.comp_op()
                     self.state = 131
+                    self.comp_op()
+                    self.state = 132
                     self.expr(0) 
-                self.state = 137
+                self.state = 138
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,14,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1057,76 +1064,76 @@ class MiniPyCodeParser ( Parser ):
         localctx = MiniPyCodeParser.Comp_opContext(self, self._ctx, self.state)
         self.enterRule(localctx, 24, self.RULE_comp_op)
         try:
-            self.state = 151
+            self.state = 152
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 138
+                self.state = 139
                 self.match(MiniPyCodeParser.T__20)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 139
+                self.state = 140
                 self.match(MiniPyCodeParser.T__21)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 140
+                self.state = 141
                 self.match(MiniPyCodeParser.T__22)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 141
+                self.state = 142
                 self.match(MiniPyCodeParser.T__23)
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 142
+                self.state = 143
                 self.match(MiniPyCodeParser.T__24)
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 143
+                self.state = 144
                 self.match(MiniPyCodeParser.T__25)
                 pass
 
             elif la_ == 7:
                 self.enterOuterAlt(localctx, 7)
-                self.state = 144
+                self.state = 145
                 self.match(MiniPyCodeParser.T__26)
                 pass
 
             elif la_ == 8:
                 self.enterOuterAlt(localctx, 8)
-                self.state = 145
+                self.state = 146
                 self.match(MiniPyCodeParser.T__27)
                 pass
 
             elif la_ == 9:
                 self.enterOuterAlt(localctx, 9)
-                self.state = 146
-                self.match(MiniPyCodeParser.T__17)
                 self.state = 147
+                self.match(MiniPyCodeParser.T__17)
+                self.state = 148
                 self.match(MiniPyCodeParser.T__27)
                 pass
 
             elif la_ == 10:
                 self.enterOuterAlt(localctx, 10)
-                self.state = 148
+                self.state = 149
                 self.match(MiniPyCodeParser.T__28)
                 pass
 
             elif la_ == 11:
                 self.enterOuterAlt(localctx, 11)
-                self.state = 149
-                self.match(MiniPyCodeParser.T__28)
                 self.state = 150
+                self.match(MiniPyCodeParser.T__28)
+                self.state = 151
                 self.match(MiniPyCodeParser.T__17)
                 pass
 
@@ -1175,29 +1182,29 @@ class MiniPyCodeParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 153
+            self.state = 154
             self.match(MiniPyCodeParser.T__29)
-            self.state = 162
+            self.state = 163
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & 267361714176) != 0):
-                self.state = 154
+                self.state = 155
                 self.expr(0)
-                self.state = 159
+                self.state = 160
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==31:
-                    self.state = 155
-                    self.match(MiniPyCodeParser.T__30)
                     self.state = 156
+                    self.match(MiniPyCodeParser.T__30)
+                    self.state = 157
                     self.expr(0)
-                    self.state = 161
+                    self.state = 162
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 164
+            self.state = 165
             self.match(MiniPyCodeParser.T__31)
         except RecognitionException as re:
             localctx.exception = re

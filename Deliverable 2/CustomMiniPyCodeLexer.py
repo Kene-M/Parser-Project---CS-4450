@@ -84,18 +84,18 @@ class CustomMiniPyCodeLexer(MiniPyCodeLexer):
         # Check if the end-of-file is ahead and there are still some DEDENTS expected.
         if self._input.LA(1) == MiniPyCodeParser.EOF and len(self.indents) != 0:
             # Remove any trailing EOF tokens from our buffer.
-            self.tokens = [token for token in self.tokens if token.type != MiniPyCodeParser.EOF]
+            #self.tokens = [token for token in self.tokens if token.type != MiniPyCodeParser.EOF]
 
             # First emit an extra line break that serves as the end of the statement.
-            self.emitToken(self.commonToken(MiniPyCodeParser.NEWLINE, '\n'))
+            #self.emitToken(self.commonToken(MiniPyCodeParser.NEWLINE, '\n'))
 
             # Now emit as much DEDENT tokens as needed.
             while len(self.indents) != 0:
-                self.emitToken(self.createDedent())
+                #self.emitToken(self.createDedent())
                 self.indents.pop()
 
             # Put the EOF back on the token stream.
-            self.emitToken(self.commonToken(MiniPyCodeParser.EOF, '<EOF>'))
+            #self.emitToken(self.commonToken(MiniPyCodeParser.EOF, '<EOF>'))
 
         next_ = super().nextToken()
         return next_ if len(self.tokens) == 0 else self.tokens.pop(0)

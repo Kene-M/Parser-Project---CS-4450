@@ -31,13 +31,23 @@ def print_tree(node, indent="", show_terminal=True):
     for child in Trees.getChildren(node):
         print_tree(child, indent + "    ", show_terminal)  # Increase indentation for children
 
+def dump(node, depth=0, ruleNames=None):
+    depthStr = '. ' * depth
+    if isinstance(node, TerminalNode):
+        print(f'{depthStr}Terminal: {node.getText()}')
+    else:
+        print(f'{depthStr}{Trees.getNodeText(node, ruleNames)}'+ ':')
+        for child in node.children:
+            dump(child, depth + 1, ruleNames)
+
 def main():
 	#code = ""
 	#s = InputStream(code)
     # OR you can use a FileStream
     s = FileStream(filepath)
     
-    lexer = CustomMiniPyCodeLexer(s)
+    #lexer = CustomMiniPyCodeLexer(s)
+    lexer = MiniPyCodeLexer(s)
     stream = CommonTokenStream(lexer)
     parser = MiniPyCodeParser(stream)
 	
@@ -45,12 +55,11 @@ def main():
         tree = parser.prog()
         if parser.getNumberOfSyntaxErrors() == 0:
             print("Parse tree:")
-            print_tree(tree)
+            #print_tree(tree)
+            dump(tree, ruleNames=parser.ruleNames)
             
     except Exception as e:
         print(f"Parsing failed: {e}")
-
-	
 
 main()
 
